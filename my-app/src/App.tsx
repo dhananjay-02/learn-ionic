@@ -1,4 +1,4 @@
-import { IonApp, IonButton, IonContent, setupIonicReact } from "@ionic/react"
+import { IonApp, IonBackdrop, IonButton, IonContent, setupIonicReact } from "@ionic/react"
 import Accordion from "./components/Accordion"
 import ToggleAccordion from "./components/ToggleAccordion";
 import ActionSheet from "./components/ActionSheet";
@@ -8,6 +8,8 @@ import IonBadgeExample from "./components/IonBadgeExample";
 import IonCardExample from "./components/IconCardExample";
 import { createRef } from "react";
 import IonicGridDemo from "./components/IconicGridDemo";
+import IonicModelExample from "./components/IonicModelExample";
+import IonicSheetModalExample from "./components/IonicSheetModalExample";
 
 setupIonicReact({
   mode: isPlatform('ios') ? 'ios' : 'md',
@@ -32,7 +34,7 @@ function App() {
   return (
     <IonApp>
       <IonContent  ref={contentRef}>
-
+        <IonBackdrop visible={true}></IonBackdrop>
         <IonButton expand="block" onClick={scrollToBottom}>
         Scroll to bottom
       </IonButton>
@@ -59,7 +61,8 @@ function App() {
         <br></br>
         <br></br>
         <IonicGridDemo/>
-
+        <br></br>
+        <br></br>
         <IonButton expand="block" onClick={scrollToTop}>
         Scroll to Top
       </IonButton>
